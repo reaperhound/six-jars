@@ -6,40 +6,48 @@ import { useEffect } from "react";
 function App() {
   const [inputAmount, setInputAmount] = useState(0);
 
-  const [jars, setJars] = useState([
+  const jars = [
     { name: "Utilities", percentage: 0.55 },
     { name: "Long-Term", percentage: 0.15 },
     { name: "Short Term", percentage: 0.1 },
     { name: "Financial Freedom", percentage: 0.08 },
     { name: "Giving", percentage: 0.05 },
     { name: "Play", percentage: 0.07 },
-  ]);
+  ];
 
   console.log({ inputAmount });
 
   return (
-    <div className="w-[100vw] h-[100vh] flex justify-center items-center">
-      <div className="h-1/3 w-2/3 flex flex-col justify-start items-center gap-[20%]">
+    <div className="w-[100vw] lg:h-[100vh] md:h-[100vh] h-[110vh] lg:pb-0 md:pb-0 pb-10 grid grid-cols-1 lg:grid-rows-3 md:grid-rows-3 grid-rows-4">
+      {/* Title */}
+      <div className="grid grid-rows-3 grid-cols-3 ">
+        <h1 className="h text-5xl text-secondary row-start-2 row-end-2 col-start-2 col-end-2 flex justify-center">
+          Six Jars
+        </h1>
+      </div>
+      <div className="flex flex-col justify-start items-center lg:gap-15 md:gap-15 gap-5 lg:row-start-2 lg:row-end-2 md:row-start-2 md:row-end-2 row-start-2 row-end-5 ">
         {/* Input  */}
         <div className="flex gap-5">
-          <label className="input input-bordered flex items-center gap-2">
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text">What is your name?</span>
+            </div>
             <input
               type="number"
-              className="no-arrows"
+              className="no-arrows input input-bordered w-full max-w-xs"
               placeholder="Enter Amount"
               value={inputAmount}
               onChange={(val) => setInputAmount(val.target.value)}
             />
           </label>
-          {/* <button className="btn btn-outline btn-secondary">Split</button> */}
         </div>
 
         {/* Values */}
-        <div className="w-[100%] h-full grid grid-cols-3 grid-rows-2 gap-[10%]">
+        <div className="w-[100%] h-full grid lg:grid-cols-3 lg:grid-rows-2 sm:grid-cols-2 gap-6 place-items-center">
           {jars.map((val, index) => (
-            <div key={index}>
+            <div key={index} className=" w-2/3">
               <p>{val.name}</p>
-              <button className="btn btn-outline w-[100%] btn-info mt-2">
+              <button className="btn btn-outline w-[100%] bg-primary text-primary-content mt-2">
                 {Math.floor(+inputAmount * val.percentage)}
               </button>
             </div>

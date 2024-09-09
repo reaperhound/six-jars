@@ -1,6 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.h {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  /* font-optical-sizing: auto; */
+  font-style: normal;
+}
 
 .no-arrows::-webkit-outer-spin-button,
 .no-arrows::-webkit-inner-spin-button {
