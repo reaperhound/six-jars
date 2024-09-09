@@ -25,7 +25,7 @@ function App() {
           <label className="input input-bordered flex items-center gap-2">
             <input
               type="number"
-              className="grow"
+              className="no-arrows"
               placeholder="Enter Amount"
               value={inputAmount}
               onChange={(val) => setInputAmount(val.target.value)}
@@ -35,7 +35,7 @@ function App() {
         </div>
 
         {/* Values */}
-        <div className="w-[100%] grid grid-cols-3 grid-rows-2 gap-[10%] ">
+        <div className="w-[100%] h-full grid grid-cols-3 grid-rows-2 gap-[10%]">
           {jars.map((val, index) => (
             <div key={index}>
               <p>{val.name}</p>
