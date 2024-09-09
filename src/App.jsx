@@ -21,7 +21,7 @@ function App() {
     <div className="w-[100vw] lg:h-[100vh] md:h-[100vh] h-[110vh] lg:pb-0 md:pb-0 pb-10 grid grid-cols-1 lg:grid-rows-3 md:grid-rows-3 grid-rows-4">
       {/* Title */}
       <div className="grid grid-rows-3 grid-cols-3 ">
-        <h1 className="h text-5xl text-secondary row-start-2 row-end-2 col-start-2 col-end-2 flex justify-center">
+        <h1 className="h text-5xl text-secondary md:row-start-2 md:row-end-2 md:col-start-2 md:col-end-2 row-start-2 col-start-1 col-end-4  flex justify-center">
           Six Jars
         </h1>
       </div>
